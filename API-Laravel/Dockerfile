@@ -25,4 +25,6 @@ RUN composer install && \
     php artisan view:cache && \
     php artisan migrate --force
 
+EXPOSE ${APP_PORT}
+
 CMD php artisan serve --host=0.0.0.0 --port=${APP_PORT}
